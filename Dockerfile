@@ -1,15 +1,16 @@
 FROM php:5.6-apache
+
 MAINTAINER CREATIVE AREA
 
 WORKDIR /var/www/html
 
-ENV PHPMYADMIN_VERSION 4_4_9
+ENV PHPMYADMIN_VERSION 4_4_13_1
 
 RUN apt-get update && apt-get install -y \
 	libfreetype6-dev \
-  libjpeg62-turbo-dev \
-  libmcrypt-dev \
-  libpng12-dev
+	libjpeg62-turbo-dev \
+	libmcrypt-dev \
+	libpng12-dev
 
 RUN docker-php-ext-install mbstring mysqli mcrypt && \
 	docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
