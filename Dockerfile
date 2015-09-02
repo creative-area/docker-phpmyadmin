@@ -4,7 +4,7 @@ MAINTAINER CREATIVE AREA
 
 WORKDIR /var/www/html
 
-ENV PHPMYADMIN_VERSION 4_4_13_1
+ENV PHPMYADMIN_VERSION 4_4_14
 
 RUN apt-get update && apt-get install -y \
 	libfreetype6-dev \
