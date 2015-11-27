@@ -2,7 +2,9 @@ FROM php:5.6-apache
 
 MAINTAINER CREATIVE AREA
 
-ENV PHPMYADMIN_VERSION 4_5_2
+WORKDIR /var/www/html
+
+ENV PHPMYADMIN_VERSION 4_5_1
 
 RUN apt-get update && apt-get install -y \
 	libfreetype6-dev \
@@ -26,5 +28,3 @@ RUN apt-get autoremove -y && \
 	rm -rf /var/lib/apt/lists/* && \
 	rm -rf /tmp/RELEASE_${PHPMYADMIN_VERSION}.tar.gz && \
 	rm -rf setup
-
-WORKDIR /var/www/html
