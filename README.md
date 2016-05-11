@@ -10,3 +10,9 @@ Links allow Docker containers to discover each other and securely transfer infor
 $ docker run --name mysql -e MYSQL_ROOT_PASSWORD=my_password -d mysql
 $ docker run --name phpmyadmin --link mysql:mysql -P creativearea/phpmyadmin
 ```
+
+You can also pass MySQL server host through an environment variable:
+
+```bash
+$ docker run --name phpmyadmin -e MYSQL_SERVER_HOST=mysql -P creativearea/phpmyadmin
+```
