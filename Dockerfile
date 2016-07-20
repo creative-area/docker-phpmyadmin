@@ -2,7 +2,7 @@ FROM php:5.6-apache
 
 MAINTAINER CREATIVE AREA
 
-ENV PHPMYADMIN_VERSION 4_6_1
+ENV PHPMYADMIN_VERSION 4_6_3
 
 RUN apt-get update && apt-get install -y \
 	libfreetype6-dev \
